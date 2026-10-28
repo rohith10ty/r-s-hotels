@@ -288,6 +288,14 @@ html.lenis, html.lenis body {
   align-items: center;
   position: relative;
   width: 100%;
+  font-size: clamp(4.5rem, 16vw, 12rem);
+  line-height: 0.82;
+}
+
+@media (max-width: 639px) {
+  .text-rep {
+    font-size: var(--mobile-word-size);
+  }
 }
 
 .text-rep span {

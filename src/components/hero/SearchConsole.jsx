@@ -163,7 +163,7 @@ const SearchConsole = ({ onSearchComplete, placement = 'below' }) => {
               onFocus={() => showPanel('destination')}
               placeholder="Where would you like to go?"
               aria-expanded={openPanel === 'destination'}
-              className="w-full bg-transparent text-sm text-white outline-none placeholder:text-white/65"
+              className="w-full bg-transparent text-xs text-white outline-none placeholder:text-white/65 sm:text-sm"
             />
           </div>
           <ChevronDown className="h-4 w-4 shrink-0 text-amber-300" />
@@ -199,7 +199,7 @@ const SearchConsole = ({ onSearchComplete, placement = 'below' }) => {
         >
           <CalendarDays className="h-6 w-6 shrink-0" strokeWidth={1.6} />
           <span className="min-w-0 flex-1">
-            <span className="block font-serif text-base">Check-in — Check-out</span>
+            <span className="block whitespace-nowrap font-serif text-sm sm:text-base">Check-in — Check-out</span>
             <span className="block truncate text-sm text-white/70">
               {checkInDate && checkOutDate ? displayDate(checkInDate) + ' — ' + displayDate(checkOutDate) : 'Select dates'}
             </span>

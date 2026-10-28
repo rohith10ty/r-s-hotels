@@ -33,12 +33,12 @@ const CuratedCollections = () => {
         </div>
 
         {/* Destination Cards Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 gap-3 min-[360px]:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-6">
           {DESTINATIONS.map((dest) => (
             <div
               key={dest.name}
               onClick={() => handleSelectDestination(dest.name)}
-              className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 border border-white/60"
+              className="group relative h-48 min-[360px]:h-52 sm:h-64 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 border border-white/60"
             >
               {/* Image */}
               <img

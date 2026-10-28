@@ -120,7 +120,7 @@ const HotelsListPage = () => {
   }, [searchParams.destination, searchQuery, priceRange, minRating, selectedTypes, selectedAmenities, freeCancellationOnly, sortBy]);
 
   return (
-    <div className="pt-20 pb-20 min-h-screen">
+    <div className="min-h-screen pb-20 pt-6 sm:pt-10 lg:pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Frosted Search, Dates & Guests Console */}

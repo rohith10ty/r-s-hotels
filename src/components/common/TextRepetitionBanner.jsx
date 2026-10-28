@@ -101,26 +101,23 @@ const TextRepetitionBanner = ({
   return (
     <div
       ref={containerRef}
-      className="relative w-full py-16 sm:py-24 overflow-hidden select-none"
+      className="relative w-full overflow-hidden py-10 select-none sm:py-24"
     >
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center">
         
         {/* Subtle pill kicker */}
         {subtitle && (
-          <div className="mb-4 inline-flex items-center gap-2 px-4 py-1 rounded-full text-[10px] sm:text-[11px] font-bold tracking-widest uppercase glass-pill text-burgundy-950 border border-white/70">
+          <div className="glass-pill mb-5 inline-flex max-w-full items-center rounded-full border border-white/70 px-3 py-1.5 text-center text-[9px] font-bold uppercase leading-snug tracking-wider text-burgundy-950 sm:mb-4 sm:px-4 sm:text-[11px] sm:tracking-widest">
             <span>{subtitle}</span>
           </div>
         )}
 
         {/* Text repetition element */}
-        <div className="w-full relative flex justify-center items-center pb-12">
+        <div className="relative flex w-full items-center justify-center pb-4 sm:pb-12">
           <div
             ref={textRef}
             className="text-rep font-black uppercase tracking-tight"
-            style={{
-              fontSize: "clamp(4.5rem, 16vw, 12rem)",
-              lineHeight: 0.82
-            }}
+            style={{ '--mobile-word-size': `${120 / word.length}vw` }}
           >
             {layers.map((layer) => {
               if (layer.isMain) {

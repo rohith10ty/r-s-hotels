@@ -138,10 +138,10 @@ const HotelCard = ({ hotel, viewMode = 'grid' }) => {
   return (
     <div 
       onClick={handleCardClick}
-      className="glass-panel rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-burgundy-950/20 hover:-translate-y-1.5 cursor-pointer group flex flex-col justify-between border border-white/60 p-4"
+      className="glass-panel rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-burgundy-950/20 hover:-translate-y-1.5 cursor-pointer group flex flex-col justify-between border border-white/60 p-3 sm:p-4"
     >
       {/* Top Image Preview */}
-      <div className="relative h-56 sm:h-60 rounded-xl overflow-hidden shadow-sm">
+      <div className="relative h-44 sm:h-60 rounded-xl overflow-hidden shadow-sm">
         <img 
           src={hotel.images[activeImageIndex] || hotel.images[0]} 
           alt={hotel.name}
