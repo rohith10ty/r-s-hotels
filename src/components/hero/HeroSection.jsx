@@ -8,8 +8,13 @@ const HeroSection = () => {
 
   return (
     <section className="hero-section relative z-40 flex min-h-[calc(100svh-56px)] flex-col justify-between px-5 pb-5 pt-12 sm:min-h-[calc(100svh-64px)] sm:px-8 sm:pb-8 lg:px-12 lg:pt-16">
-      <div className="hero-content mx-auto flex w-full max-w-[1440px] flex-1 items-center py-8">
-        <div className="max-w-[760px] text-white [text-shadow:0_2px_18px_rgba(24,3,11,0.55)]">
+      <div className="hero-content relative mx-auto flex w-full max-w-[1440px] flex-1 items-center py-8">
+        <div className="hero-hotel-visual pointer-events-none absolute inset-y-0 -right-8 hidden w-[70%] lg:block" aria-hidden="true">
+          <div className="hero-hotel-glow absolute inset-x-[10%] bottom-[3%] h-1/2" />
+          <img src="/hotel-cutout.png" alt="" className="hero-hotel-image relative h-full w-full object-contain object-right-bottom" />
+        </div>
+
+        <div className="relative z-10 max-w-[760px] text-white [text-shadow:0_2px_18px_rgba(24,3,11,0.55)]">
           <p className="hero-eyebrow mb-5 text-xs font-bold uppercase tracking-[0.42em] text-amber-300 sm:text-sm">
             The art of staying beautifully
           </p>
@@ -40,7 +45,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-[1320px]">
+      <div className="relative z-20 mx-auto w-full max-w-[1320px]">
         <SearchConsole placement="above" />
       </div>
     </section>
